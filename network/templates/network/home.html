@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Главная Страница</title>
+</head>
+<body>
+    <h1>Добро пожаловать в Онлайн Платформу Торговли Электроникой</h1>
+    <p>Выберите действие:</p>
+    <ul>
+        <li><a href="{% url 'add_supplier' %}">Добавить Поставщика</a></li>
+        <li><a href="{% url 'add_product' %}">Добавить Продукт</a></li>
+        <li><a href="{% url 'add_network_node' %}">Добавить Узел Сети</a></li>
+    </ul>
+</body>
+</html>

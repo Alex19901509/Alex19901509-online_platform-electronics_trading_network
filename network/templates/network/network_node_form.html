@@ -1,0 +1,59 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Добавить Узел Сети</title>
+</head>
+<body>
+<h1>Добавить Узел Сети</h1>
+<form method="POST">
+    {% csrf_token %}
+    <label for="name">Имя:</label>
+    <input type="text" id="name" name="name" required><br>
+
+    <label for="email">Email:</label>
+    <input type="email" id="email" name="email" required><br>
+
+    <label for="country">Страна:</label>
+    <input type="text" id="country" name="country" required><br>
+
+    <label for="city">Город:</label>
+    <input type="text" id="city" name="city" required><br>
+
+    <label for="street">Улица:</label>
+    <input type="text" id="street" name="street" required><br>
+
+    <label for="house_number">Номер Дома:</label>
+    <input type="text" id="house_number" name="house_number" required><br>
+
+    <label for="product">Продукт:</label>
+    <select name="product" id="product" required>
+        {% for product in products %}
+        <option value="{{product.id }}">{{ product.name }}</option>
+        {% endfor %}
+    </select><br>
+
+    <label for="supplier">Поставщик:</label>
+    <select name="supplier" id="supplier">
+        <option value="">--- Выберите Поставщика ---</option>
+        {% for supplier in suppliers %}
+        <option value="{{ supplier.id }}">{{ supplier.name }}</option>
+        {% endfor %}
+    </select><br>
+
+    <label for="debt">Долг:</label>
+    <input type="number" id="debt" name="debt" step="0.01" required><br>
+
+    <label for="level">Уровень:</label>
+    <select name="level" id="level" required>
+        <option value="0">Фабрика</option>
+        <option value="1">Розничная Сеть</option>
+        <option value="2">Предприниматель</option>
+    </select><br>
+
+    <input type="submit" value="Добавить">
+</form>
+</body>
+</html>

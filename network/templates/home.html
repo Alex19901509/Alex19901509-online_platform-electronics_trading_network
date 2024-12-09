@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Главная страница</title>
+</head>
+<body>
+    <h1>Добро пожаловать в Онлайн Платформу Торговли Электроникой</h1>
+    <p>Выберите действие:</p>
+    <ul>
+        <li><a href="{% url 'add_supplier' %}">Добавить Поставщика</a></li>
+        <li><a href="{% url 'add_product' %}">Добавить Продукт</a></li>
+        <li><a href="{% url 'add_network_node' %}">Добавить Узел Сети</a></li>
+    </ul>
+<form method="post" action="{% url 'logout' %}">
+    {% csrf_token %}
+    <button type="submit">Выйти</button>
+</body>
+</html>
+   
