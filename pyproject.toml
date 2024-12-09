@@ -1,0 +1,14 @@
+[tool.poetry]
+name = "online_platform-electronics_trading_network"
+version = "0.1.0"
+description = ""
+authors = ["Alex19901509 <147518422+Alex19901509@users.noreply.github.com>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.13"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
